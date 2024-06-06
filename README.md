@@ -1,27 +1,35 @@
-# Deploy FastAPI on Render
+#forecast-prediction
 
-Use this repo as a template to deploy a Python [FastAPI](https://fastapi.tiangolo.com) service on Render.
+Instalação
 
-See https://render.com/docs/deploy-fastapi or follow the steps below:
+    Clone o repositório:
 
-## Manual Steps
+    git clone https://github.com/GuilhermeAlencarM/forecast-prediction
 
-1. You may use this repository directly or [create your own repository from this template](https://github.com/render-examples/fastapi/generate) if you'd like to customize the code.
-2. Create a new Web Service on Render.
-3. Specify the URL to your new repository or this repository.
-4. Render will automatically detect that you are deploying a Python service and use `pip` to download the dependencies.
-5. Specify the following as the Start Command.
 
-    ```shell
-    uvicorn main:app --host 0.0.0.0 --port $PORT
-    ```
 
-6. Click Create Web Service.
+Crie e ative o ambiente virtual:
 
-Or simply click:
+bash
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/render-examples/fastapi)
+    python3 -m venv venv
+    source venv/bin/activate  # Linux/Mac
 
-## Thanks
 
-Thanks to [Harish](https://harishgarg.com) for the [inspiration to create a FastAPI quickstart for Render](https://twitter.com/harishkgarg/status/1435084018677010434) and for some sample code!
+Instale as dependências:
+
+bash
+
+    pip install -r requirements.txt
+
+Uso
+
+    Execute o programa:
+
+    uvicorn main:app
+
+
+Documentação da API
+
+      http://127.0.0.1:8000/docs
+
